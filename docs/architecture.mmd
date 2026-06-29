@@ -1,0 +1,13 @@
+flowchart TD
+    U[ユーザー] --> H[LP: index.html]
+    H --> JS[src/main.js]
+    JS --> C[src/content.js\nLP文言・カード・機能データ]
+    JS --> UT[src/utils.js\n料金計算・検索・フォーム検証]
+    JS --> UI[DOMレンダリング]
+    UI --> CTA[資料DL / 料金試算 / AIデモ]
+    CTA --> LS[localStorage: デモ用リード保存]
+    CTA --> MAIL[mailto: メール下書き]
+    GH[GitHub Actions] --> Lint[npm run lint]
+    GH --> Test[npm test]
+    GH --> Build[npm run build]
+    Build --> Artifact[dist artifact]
